@@ -1,6 +1,7 @@
 package com.elisariane.arquiteturahexagonal.adapters.in.controller.mapper;
 
 import com.elisariane.arquiteturahexagonal.adapters.in.controller.request.CustomerRequest;
+import com.elisariane.arquiteturahexagonal.adapters.in.controller.response.CustomerResponse;
 import com.elisariane.arquiteturahexagonal.application.core.domain.Customer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -12,5 +13,7 @@ public interface CustomerMapper {
     @Mapping(target = "isValidCpf", ignore = true)
     @Mapping(target = "address", ignore = true)
     Customer toCustomer(CustomerRequest customerRequest);
+
+    CustomerResponse toCustomerResponse(Customer customer);
 
 }
