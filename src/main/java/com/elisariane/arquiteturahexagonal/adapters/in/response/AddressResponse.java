@@ -1,4 +1,4 @@
-package com.elisariane.arquiteturahexagonal.adapters.in.controller.response;
+package com.elisariane.arquiteturahexagonal.adapters.in.response;
 
 import lombok.Data;
 

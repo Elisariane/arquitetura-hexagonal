@@ -1,8 +1,8 @@
 package com.elisariane.arquiteturahexagonal.adapters.in.controller;
 
-import com.elisariane.arquiteturahexagonal.adapters.in.controller.mapper.CustomerMapper;
-import com.elisariane.arquiteturahexagonal.adapters.in.controller.request.CustomerRequest;
-import com.elisariane.arquiteturahexagonal.adapters.in.controller.response.CustomerResponse;
+import com.elisariane.arquiteturahexagonal.adapters.in.mapper.CustomerMapper;
+import com.elisariane.arquiteturahexagonal.adapters.in.request.CustomerRequest;
+import com.elisariane.arquiteturahexagonal.adapters.in.response.CustomerResponse;
 import com.elisariane.arquiteturahexagonal.application.ports.in.FindCustomerByIdInputPort;
 import com.elisariane.arquiteturahexagonal.application.ports.in.InsertCustomerInputPort;
 import jakarta.validation.Valid;

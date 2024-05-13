@@ -1,4 +1,4 @@
-package com.elisariane.arquiteturahexagonal.adapters.in.controller.response;
+package com.elisariane.arquiteturahexagonal.adapters.in.response;
 
 import com.elisariane.arquiteturahexagonal.application.core.domain.Address;
 import lombok.Data;
