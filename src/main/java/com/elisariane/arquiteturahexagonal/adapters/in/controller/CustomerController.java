@@ -4,6 +4,7 @@ import com.elisariane.arquiteturahexagonal.adapters.in.mapper.CustomerMapper;
 import com.elisariane.arquiteturahexagonal.adapters.in.request.CustomerRequest;
 import com.elisariane.arquiteturahexagonal.adapters.in.response.CustomerResponse;
 import com.elisariane.arquiteturahexagonal.application.core.domain.Customer;
+import com.elisariane.arquiteturahexagonal.application.ports.in.DeleteCustomerByIdInputPort;
 import com.elisariane.arquiteturahexagonal.application.ports.in.FindCustomerByIdInputPort;
 import com.elisariane.arquiteturahexagonal.application.ports.in.InsertCustomerInputPort;
 import com.elisariane.arquiteturahexagonal.application.ports.in.UpdateCustomerInputPort;
@@ -24,6 +25,9 @@ public class CustomerController {
 
     @Autowired
     private UpdateCustomerInputPort updateCustomerInputPort;
+
+    @Autowired
+    private DeleteCustomerByIdInputPort deleteCustomerByIdInputPort;
 
     @Autowired
     private CustomerMapper customerMapper;
@@ -52,6 +56,12 @@ public class CustomerController {
 
    }
 
+
+   @DeleteMapping("{id}")
+    public ResponseEntity<Void> delete(@PathVariable final String id) {
+        deleteCustomerByIdInputPort.delete(id);
+        return ResponseEntity.noContent().build();
+   }
 
 
 }
